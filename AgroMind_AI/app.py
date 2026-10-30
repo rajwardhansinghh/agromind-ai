@@ -46,6 +46,6 @@ if __name__=='__main__':
     args=parser.parse_args()
     print(f'AgroMind AI • Open http://localhost:{args.port} • Ctrl+C to stop',flush=True)
     try:
-        ThreadingHTTPServer(('127.0.0.1',args.port),Handler).serve_forever()
+        ThreadingHTTPServer(('0.0.0.0',args.port),Handler).serve_forever()
     except KeyboardInterrupt:
         print('\nServer stopped.')
